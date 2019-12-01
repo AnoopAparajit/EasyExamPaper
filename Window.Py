@@ -11,7 +11,7 @@ class Application(tk.Frame):
         self.LeftFrame = tk.Frame()
         LeftFrame = self.LeftFrame
         LeftFrame.pack(side="left")
-        LeftFrame.hi_there = tk.Button(self)
+        LeftFrame.hi_there = tk.Button(LeftFrame)
         LeftFrame.hi_there["text"] = "Hello World\n(click me)"
         LeftFrame.hi_there["command"] = self.say_hi
         LeftFrame.hi_there.pack(side="top")
