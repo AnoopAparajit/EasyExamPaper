@@ -1,14 +1,14 @@
-import tkinter as tk
+from tkinter import *
 
-class Application(tk.Frame):
+class Application(Frame):
     def __init__(self, master=None):
         super().__init__(master)
         self.master = master
-        self.pack()
+        self.pack(side="left")
         self.create_widgets()
 
     def create_widgets(self):
-        self.hi_there = tk.Button(self)
+        self.hi_there = Button(self)
         self.hi_there["text"] = "Hello World\n(click me)"
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
@@ -16,7 +16,7 @@ class Application(tk.Frame):
     def say_hi(self):
         print("hi there, everyone!")
 
-root = tk.Tk()
+root = Tk()
 root.state('zoomed')
 app = Application(master=root)
 app.mainloop()
