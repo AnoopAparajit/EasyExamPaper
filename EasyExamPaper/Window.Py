@@ -17,5 +17,6 @@ class Application(tk.Frame):
         print("hi there, everyone!")
 
 root = tk.Tk()
+root.state('zoomed')
 app = Application(master=root)
 app.mainloop()
